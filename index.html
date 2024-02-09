@@ -3,16 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do App</title>
+    <title>Book Recommendation Tool</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="app">
-        <h1>To-Do List</h1>
-        <input type="text" id="taskInput" placeholder="Add new task...">
-        <button onclick="addTask()">Add Task</button>
-        <ul id="taskList"></ul>
+    <h1>Book Recommendation Tool</h1>
+    <div>
+        <label for="genre-select">Choose a genre:</label>
+        <select id="genre-select">
+            <option value="">--Please choose an option--</option>
+            <option value="fantasy">Fantasy</option>
+            <option value="sci-fi">Sci-Fi</option>
+            <option value="mystery">Mystery</option>
+            <option value="non-fiction">Non-Fiction</option>
+        </select>
     </div>
+    <div>
+        <label for="mood-select">Choose your mood:</label>
+        <select id="mood-select">
+            <option value="">--Please choose an option--</option>
+            <option value="happy">😊 Happy</option>
+            <option value="sad">😢 Sad</option>
+            <option value="excited">🤩 Excited</option>
+            <option value="relaxed">😌 Relaxed</option>
+        </select>
+    </div>
+    <button onclick="getRecommendation()">Get Recommendation</button>
+    <div id="recommendation"></div>
     <script src="script.js"></script>
 </body>
 </html>
